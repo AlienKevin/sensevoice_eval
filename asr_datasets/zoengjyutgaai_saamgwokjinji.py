@@ -2,7 +2,7 @@ from datasets import load_dataset
 from datasets import Dataset
 
 class ZoengjyutgaaiSaamgwokjinjiDataset(Dataset):
-    def __init__(self, dataset_path="laubonghaudoi/zoengjyutgaai_saamgwokjinji", split='train', batch_size=64):
+    def __init__(self, dataset_path="laubonghaudoi/zoengjyutgaai_saamgwokjinji", split='saamgwokjinji+seoiwuzyun+mouzaakdung', batch_size=64):
         self.dataset = load_dataset(dataset_path, split=split)
         self.batch_size = batch_size
         self.audio_paths = list(self.dataset)
